@@ -103,7 +103,7 @@ func (nu NullUUID) MarshalJSON() ([]byte, error) {
 		return json.Marshal(nu.UUID)
 	}
 
-	return []byte(`""`), nil
+	return jsonNull, nil
 }
 
 // UnmarshalJSON implements json.Unmarshaler.
