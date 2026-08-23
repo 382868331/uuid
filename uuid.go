@@ -312,7 +312,7 @@ func (uuid UUID) Variant() Variant {
 
 // Version returns the version of uuid.
 func (uuid UUID) Version() Version {
-	return Version(uuid[6] & 0x0f)
+	return Version(uuid[6] >> 4)
 }
 
 func (v Version) String() string {
