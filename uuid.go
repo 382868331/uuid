@@ -329,7 +329,7 @@ func (v Variant) String() string {
 	case Reserved:
 		return "Reserved"
 	case Microsoft:
-		return "Future"
+		return "Microsoft"
 	case Future:
 		return "Future"
 	case Invalid:
