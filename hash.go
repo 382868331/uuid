@@ -37,7 +37,7 @@ func NewHash(h hash.Hash, space UUID, data []byte, version int) UUID {
 	s := h.Sum(nil)
 	var uuid UUID
 	copy(uuid[:], s)
-	uuid[6] = (uuid[6] & 0x0f) | uint8(version&0xf)
+	uuid[6] = (uuid[6] & 0x0f) | uint8((version&0xf)<<4)
 	uuid[8] = (uuid[8] & 0x3f) | 0x80 // RFC 9562 variant
 	return uuid
 }
