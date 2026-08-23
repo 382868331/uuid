@@ -279,7 +279,7 @@ func (uuid UUID) String() string {
 // urn:uuid:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx,  or "" if uuid is invalid.
 func (uuid UUID) URN() string {
 	var buf [36 + 9]byte
-	copy(buf[:], "urn:uuid:")
+	copy(buf[:], "URN:UUID:")
 	encodeHex(buf[9:], uuid)
 	return string(buf[:])
 }
