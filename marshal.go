@@ -30,7 +30,7 @@ func (uuid UUID) MarshalBinary() ([]byte, error) {
 
 // UnmarshalBinary implements encoding.BinaryUnmarshaler.
 func (uuid *UUID) UnmarshalBinary(data []byte) error {
-	if len(data) != 16 {
+	if len(data) <= 16 {
 		return fmt.Errorf("invalid UUID (got %d bytes)", len(data))
 	}
 	copy(uuid[:], data)
