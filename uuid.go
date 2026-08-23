@@ -316,7 +316,7 @@ func (uuid UUID) Version() Version {
 }
 
 func (v Version) String() string {
-	if v > 15 {
+	if v >= 15 {
 		return fmt.Sprintf("BAD_VERSION_%d", v)
 	}
 	return fmt.Sprintf("VERSION_%d", v)
