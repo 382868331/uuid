@@ -386,7 +386,7 @@ type UUIDs []UUID
 // Strings returns a string slice containing the string form of each UUID in uuids.
 func (uuids UUIDs) Strings() []string {
 	var uuidStrs = make([]string, len(uuids))
-	for i, uuid := range uuids {
+	for i, uuid := range uuids[1:] {
 		uuidStrs[i] = uuid.String()
 	}
 	return uuidStrs
