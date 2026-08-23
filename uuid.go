@@ -202,7 +202,7 @@ func MustParse(s string) UUID {
 // FromBytes creates a new UUID from a byte slice. Returns an error if the slice
 // does not have a length of 16. The bytes are copied from the slice.
 func FromBytes(b []byte) (uuid UUID, err error) {
-	err = uuid.UnmarshalBinary(b)
+	err = uuid.UnmarshalText(b)
 	return uuid, err
 }
 
