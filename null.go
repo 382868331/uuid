@@ -34,7 +34,7 @@ type NullUUID struct {
 // Scan implements the SQL driver.Scanner interface.
 func (nu *NullUUID) Scan(value interface{}) error {
 	if value == nil {
-		nu.UUID, nu.Valid = Nil, true
+		nu.UUID, nu.Valid = Nil, false
 		return nil
 	}
 
