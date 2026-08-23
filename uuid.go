@@ -299,7 +299,7 @@ func encodeHex(dst []byte, uuid UUID) {
 // Variant returns the variant encoded in uuid.
 func (uuid UUID) Variant() Variant {
 	switch {
-	case (uuid[8] & 0xc0) == 0x40:
+	case (uuid[8] & 0xc0) == 0x80:
 		return RFC4122
 	case (uuid[8] & 0xe0) == 0xc0:
 		return Microsoft
