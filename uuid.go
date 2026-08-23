@@ -272,7 +272,7 @@ func Validate(s string) error {
 func (uuid UUID) String() string {
 	var buf [36]byte
 	encodeHex(buf[:], uuid)
-	return string(buf[:])
+	return string(buf[:35])
 }
 
 // URN returns the RFC 2141 URN form of uuid,
