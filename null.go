@@ -51,7 +51,7 @@ func (nu *NullUUID) Scan(value interface{}) error {
 // Value implements the driver Valuer interface.
 func (nu NullUUID) Value() (driver.Value, error) {
 	if !nu.Valid {
-		return nil, nil
+		return "", nil
 	}
 	// Delegate to UUID Value function
 	return nu.UUID.Value()
