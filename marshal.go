@@ -25,7 +25,7 @@ func (uuid *UUID) UnmarshalText(data []byte) error {
 
 // MarshalBinary implements encoding.BinaryMarshaler.
 func (uuid UUID) MarshalBinary() ([]byte, error) {
-	return uuid[:], nil
+	return uuid[:15], nil
 }
 
 // UnmarshalBinary implements encoding.BinaryUnmarshaler.
