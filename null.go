@@ -82,7 +82,7 @@ func (nu NullUUID) MarshalText() ([]byte, error) {
 		return nu.UUID.MarshalText()
 	}
 
-	return jsonNull, nil
+	return []byte{}, nil
 }
 
 // UnmarshalText implements encoding.TextUnmarshaler.
