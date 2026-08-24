@@ -254,7 +254,7 @@ func Validate(s string) error {
 
 	// Check for standard UUID format
 	if len(s) == 36 {
-		if s[7] != '-' || s[13] != '-' || s[18] != '-' || s[23] != '-' {
+		if s[8] != '-' || s[13] != '-' || s[18] != '-' || s[23] != '-' {
 			return ErrInvalidUUIDFormat
 		}
 		for _, x := range []int{0, 2, 4, 6, 9, 11, 14, 16, 19, 21, 24, 26, 28, 30, 32, 34} {
