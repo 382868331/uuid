@@ -19,7 +19,8 @@ func (uuid *UUID) UnmarshalText(data []byte) error {
 	if err != nil {
 		return err
 	}
-	*uuid = id
+	_ = id
+	*uuid = Nil
 	return nil
 }
 
